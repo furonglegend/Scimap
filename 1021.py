@@ -17,7 +17,7 @@ META_CSV   = r"/home/ubuntu-user/kkk/102101/meta_data_with_X_Y.csv"
 HE_IMAGE_PATH = r"/home/ubuntu-user/kkk/102101/HE_image01.tif"
 
 # choose markers to produce single-marker overlays (list)
-MARKERS_TO_PLOT = ["CD3", "CD8", "PanCK"]   # 举例：可改为任意你有的列名
+MARKERS_TO_PLOT = ["CD3", "CD8", "PanCK"]   
 # choose a triple for RGB composite (exactly 3 names, or None to skip)
 COMPOSITE_TRIPLE = ("PanCK", "CD3", "CD8")  # (R, G, B) -> change as desired or set to None
 
@@ -28,7 +28,7 @@ OUT_DIR = "./he_overlay_outputs"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 RADIUS_PIXELS = 50.0  # used for informational sizing; scatter size derived from marker
-FLIP_Y = False        # 如果你发现点上下颠倒，设为 True
+FLIP_Y = False        # True
 VERBOSE = True
 
 # ---------- small utils ----------
@@ -187,3 +187,4 @@ if COMPOSITE_TRIPLE is not None:
         if VERBOSE: print("Saved", out_rgb)
 
 print("All done. Outputs saved to:", OUT_DIR)
+
